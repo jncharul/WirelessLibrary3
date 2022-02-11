@@ -96,7 +96,7 @@ export default class TransactionScreen extends React.Component {
               />
               <TouchableOpacity
                 style={styles.scanbutton}
-                onPress={() => this.getCameraPermissio('studentId')}>
+                onPress={() => this.getCameraPermission('studentId')}>
                 <Text style={styles.scanbuttonText}>Scan</Text>
               </TouchableOpacity>
             </View>

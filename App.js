@@ -6,34 +6,34 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import TransactionScreen from './screens/BookTransactionScreen';
 import SearchScreen from './screens/SearchScreen';
 
-import {Rajdhani_700Bold} from '@expo-google-fonts/rajdhani'
+import { Rajdhani_600SemiBold } from '@expo-google-fonts/rajdhani'
 import * as Font from 'expo-font'
 import BottomTabNavigator from './components/BottomTabNavigator'
 
 export default class App extends React.Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      fontLoaded : false
+      fontLoaded: false
     }
   }
-  async loadFonts(){
+  async loadFonts() {
     await Font.loadAsync({
-      Rajdhani_700Bold : Rajdhani_700Bold
+      Rajdhani_600SemiBold: Rajdhani_600SemiBold
     })
     this.setState({
-      fontLoaded : true
+      fontLoaded: true
     })
   }
-  componentDidMount(){
+  componentDidMount() {
     this.loadFonts();
   }
   render() {
-    const {fontLoaded} = this.state;
-    if(fontLoaded){
+    const { fontLoaded } = this.state;
+    if (fontLoaded) {
       return (
-      <BottomTabNavigator />
-    )
+        <BottomTabNavigator />
+      )
     }
     return null
   }
